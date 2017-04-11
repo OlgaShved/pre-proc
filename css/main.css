@@ -172,16 +172,9 @@ header {
 
 a {
   text-decoration: none; }
-  a:hover {
-    text-decoration: underline;
-    color: #ffcc00;
-    transition: all 0.5s ease;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease; }
-    a:hover:hover, a:hover:active, a:hover:focus {
-      opacity: 0.8; }
+
+.column-border {
+  border-right: 1px solid #ffcc00; }
 
 .view-profile {
   color: #666;
@@ -206,8 +199,8 @@ a {
   -ms-transition: color 0.5s ease; }
 
 .manimage {
-  border-right: 1px solid #ffcc00;
-  padding-right: 50px; }
+  padding-right: 50px;
+  border-right: 1px solid #ffcc00; }
   .manimage .passe-partout {
     display: inline-block;
     /* ╨б╤В╤А╨╛╤З╨╜╨╛-╨▒╨╗╨╛╤З╨╜╤Л╨╣ ╤Н╨╗╨╡╨╝╨╡╨╜╤В */
@@ -229,19 +222,33 @@ a {
   text-align: center;
   font-size: 40px;
   color: #ffcc00; }
+  .icon-block:hover {
+    text-decoration: underline;
+    color: #ffcc00;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease; }
 
 .details {
   margin: 0 auto;
   text-align: center; }
   .details .mans-name {
     margin: 90px 0 0;
+    position: relative;
     padding-bottom: 30px;
     color: #666666;
     font-size: 36px;
     line-height: 1;
     font-weight: 900; }
-    .details .mans-name .name-border {
-      padding-bottom: 26px;
+    .details .mans-name:before {
+      content: '';
+      position: absolute;
+      top: 105%;
+      width: 20%;
+      left: 40%;
+      height: 1px;
       border-bottom: 1px solid #ffcc00; }
   .details .mans-trade {
     margin: 30px 0 26px;
@@ -250,7 +257,7 @@ a {
     font-weight: 400; }
   .details .social-icons {
     margin-bottom: 30px; }
-    .details .social-icons a .one-social {
+    .details .social-icons .one-social {
       display: inline-block;
       margin: 0;
       width: 33px;
@@ -261,7 +268,7 @@ a {
       line-height: 33px;
       text-align: center;
       vertical-align: middle; }
-      .details .social-icons a .one-social:hover {
+      .details .social-icons .one-social:hover {
         text-decoration: underline;
         color: #ffcc00;
         transition: all 0.5s ease;
@@ -269,8 +276,6 @@ a {
         -moz-transition: all 0.5s ease;
         -o-transition: all 0.5s ease;
         -ms-transition: all 0.5s ease; }
-        .details .social-icons a .one-social:hover:hover, .details .social-icons a .one-social:hover:active, .details .social-icons a .one-social:hover:focus {
-          opacity: 0.8; }
   .details .mans-text {
     margin: 0 0 22px; }
   .details .view-profile {
@@ -286,5 +291,25 @@ a {
 
 .next-slide {
   padding: 0; }
+
+.element {
+  position: relative;
+  margin-bottom: 97px; }
+  .element:before {
+    content: '';
+    position: absolute;
+    top: 169%;
+    width: 55%;
+    left: 23%;
+    height: 1px;
+    background: #ffcc00; }
+  .element:after {
+    content: url(../img/bonfire.png);
+    position: absolute;
+    padding: 0 10px;
+    background: #fff;
+    top: 115%;
+    width: 10%;
+    left: 45%; }
 
 /*# sourceMappingURL=main.css.map */

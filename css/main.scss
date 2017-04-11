@@ -90,10 +90,12 @@ header{
 
 a {
 	text-decoration: none;
-	&:hover {
-		@include a-hover($header-color);
-	}
 }
+
+.column-border {
+	border-right: 1px solid $header-color;
+}
+
 
 .view-profile{
 	@include btn-hover(#666, #fff, $header-color);
@@ -107,8 +109,8 @@ a {
 
 
 .manimage {
-	border-right: 1px solid $header-color;
 	padding-right: 50px;
+	border-right: 1px solid $header-color;
 	.passe-partout {
 		display: inline-block; /* Строчно-блочный элемент */
 	    margin: 75px auto 68px; /* Убираем отступы */
@@ -130,7 +132,12 @@ a {
 	text-align: center;
 	font-size: 40px;
 	color: $header-color;
+	&:hover {
+		text-decoration: underline;
+		color: $header-color;
+		@include transition(all, 0.5s, ease);
 	}
+}
 
 .details {
 	margin: 0 auto;
@@ -139,15 +146,21 @@ a {
 
 	.mans-name {
 		margin: 90px 0 0;
+		position: relative;
 		padding-bottom: 30px;
 		color: #666666;
 		font-size: 36px;
 		line-height: 1;
 		font-weight: 900;
 
-		.name-border {
-			padding-bottom: 26px;
-			border-bottom: 1px solid $header-color;
+		&:before {
+			content: '';
+		    position: absolute;
+		    top: 105%;
+		    width: 20%;
+		    left: 40%;
+		    height: 1px;
+		    border-bottom: 1px solid $header-color;
 		}
 	}
 
@@ -161,24 +174,23 @@ a {
 	.social-icons {
 		margin-bottom: 30px;
 
-		a .one-social {
-		    display: inline-block;
-		    margin: 0;
-		    width: 33px;
-		    height: 33px;
-		    border: 1px solid #ccc;
-		    border-radius: 50%;
-		    color: #ccc;
-		    line-height: 33px;
-		    text-align: center;
-		    vertical-align: middle;
-
-			&:hover {
-			@include a-hover($header-color);
+		.one-social {
+			 display: inline-block;
+			 margin: 0;
+			 width: 33px;
+			 height: 33px;
+			 border: 1px solid #ccc;
+			 border-radius: 50%;
+			 color: #ccc;
+			 line-height: 33px;
+			 text-align: center;
+			 vertical-align: middle;
+			 &:hover {
+			 	text-decoration: underline;
+				color: $header-color;
+				@include transition(all, 0.5s, ease);
 			}
 		}
-
-
 	}
 
 	.mans-text {
@@ -205,4 +217,28 @@ a {
 	padding: 0;
 }
 
+
+.element {
+	position: relative;
+	margin-bottom: 97px;
+	&:before {
+		content: '';
+	    position: absolute;
+	    top: 169%;
+	    width: 55%;
+	    left: 23%;
+	    height: 1px;
+	    background: $header-color;
+	}
+	&:after {
+		content: url(../img/bonfire.png);
+		position: absolute;
+		padding: 0 10px;
+		background:#fff;
+		top: 115%;
+	    width: 10%;
+	    left: 45%;
+
+	}
+}
 
