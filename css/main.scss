@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500|Roboto:900');
+@import "variables";
+@import "mixin";
+@import "grid";
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?7wmpo');
+  src:  url('../fonts/icomoon.eot?7wmpo#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?7wmpo') format('truetype'),
+    url('../fonts/icomoon.woff?7wmpo') format('woff'),
+    url('../fonts/icomoon.svg?7wmpo#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-google+:before {
+  content: "\e900";
+}
+.icon-chevron-left:before {
+  content: "\f053";
+}
+.icon-chevron-right:before {
+  content: "\f054";
+}
+.icon-twitter:before {
+  content: "\f099";
+}
+.icon-facebook:before {
+  content: "\f09a";
+}
+.icon-facebook-f:before {
+  content: "\f09a";
+}
+.icon-linkedin:before {
+  content: "\f0e1";
+}
+
+
+
+*, *:after, *:before{
+	@include box-sizing;
+}
+
+body{
+	font-family: $main-font;
+	color: $font-color;
+}
+
+header{
+	text-align: center;
+	text-transform: uppercase;
+
+	h4{
+		margin: 0 0 10px;
+		padding-top: 110px;
+		font-size: 18px;
+		line-height: 1.5;
+		color: #898f8f;
+	}
+
+	h1{
+		margin: 0 0 40px;
+		color: $header-color;
+		font-size: 60px;
+		line-height: 1.1;
+		font-weight: 900;
+	}
+
+	.devider {
+		margin: 0 0 40px;
+	}
+
+}
+
+a {
+	text-decoration: none;
+	&:hover {
+		@include a-hover($header-color);
+	}
+}
+
+.view-profile{
+	@include btn-hover(#666, #fff, $header-color);
+	@include transition(all, 0.5s, ease);
+}
+
+
+.animation{
+	@include transition(color, 0.5s, ease);
+}
+
+
+.manimage {
+	border-right: 1px solid $header-color;
+	padding-right: 50px;
+	.passe-partout {
+		display: inline-block; /* Строчно-блочный элемент */
+	    margin: 75px auto 68px; /* Убираем отступы */
+	    padding: $col-padding; /* Размер паспарту */
+	    padding-bottom: 11px;
+		border: 1px solid $header-color;/* Параметры рамки */
+	    background: #fff; /* Цвет фона паспарту */
+
+
+		img {
+			border: 1px solid $header-color;
+		}
+	}
+}
+
+.icon-block {
+	/* vertical-align: middle; */
+	margin-top: 270px;
+	text-align: center;
+	font-size: 40px;
+	color: $header-color;
+	}
+
+.details {
+	margin: 0 auto;
+	text-align: center;
+
+
+	.mans-name {
+		margin: 90px 0 0;
+		padding-bottom: 30px;
+		color: #666666;
+		font-size: 36px;
+		line-height: 1;
+		font-weight: 900;
+
+		.name-border {
+			padding-bottom: 26px;
+			border-bottom: 1px solid $header-color;
+		}
+	}
+
+	.mans-trade {
+		margin: 30px 0 26px;
+		font-size: 24px;
+		line-height: 1.5;
+		font-weight: 400;
+	}
+
+	.social-icons {
+		margin-bottom: 30px;
+
+		a .one-social {
+		    display: inline-block;
+		    margin: 0;
+		    width: 33px;
+		    height: 33px;
+		    border: 1px solid #ccc;
+		    border-radius: 50%;
+		    color: #ccc;
+		    line-height: 33px;
+		    text-align: center;
+		    vertical-align: middle;
+
+			&:hover {
+			@include a-hover($header-color);
+			}
+		}
+
+
+	}
+
+	.mans-text {
+		margin: 0 0 22px;
+	}
+
+	.view-profile {
+		margin-bottom: 75px;
+	}
+
+}
+
+.img-points {
+	text-align: center;
+	margin: 40px 0 93px;
+}
+
+.img-icon {
+	text-align: center;
+	margin: 0 0 40px;
+}
+
+.next-slide {
+	padding: 0;
+}
+
+
